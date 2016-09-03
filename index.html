@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Title</title>
+</head>
+<body ng-controller="mainCtrl">
+    <h1>{{header}}</h1>
+
+    <!--using an template to the DOM -->
+    <ng-include src="'templates/fruit-list.html'" ng-controller="ListCtrl"></ng-include>
+
+    <!--naming the controller instance-->
+    <div ng-controller="NamedCtrl as myCtrl">
+        {{myCtrl.title}}
+    </div>
+
+    <script src="lib/angular/angular.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
